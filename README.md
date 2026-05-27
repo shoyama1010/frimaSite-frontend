@@ -1,4 +1,60 @@
-# React + TypeScript + Vite
+# coachtechフリマアプリ　（React + TypeScript + Vite）
+
+## アプリ概要（画面構成）
+Laravel API と React(TypeScript) を用いたフリマアプリです。
+
+## アプリケーションURL
+
+http://localhost:5173
+
+## 作成した目的
+
+laravelで動いてたフリマアプリを、SPA化して、画面構成的にどのようになるかを理解を深めました。
+
+## 技術構成
+
+### フロントエンド
+- React 
+- TypeScript  
+- Vite
+- React Router
+- Tailwind css 
+
+### API連携
+- Laravel API（Sanctum認証）
+
+## 機能一覧
+
+-（仮）ログイン / ログアウト（会員登録は開発中）
+- 商品一覧表示
+- 検索機能
+- 商品詳細表示（下記のいいね機能以外は、開発中）
+- いいね機能
+
+## 使用技術
+
+### フロントエンド
+- React
+- TypeScript
+- React Router
+- Tailwind CSS
+- Vite
+
+## 環境構築
+
+## 1. リポジトリをクローン
+
+- git clone https://github.com/shoyama1010/frimaSite-frontend.git
+- cd drugstock-frontend
+
+## 2.　パッケージをインストール
+
+　npm install
+
+## 3. 開発サーバー起動
+
+　npm run dev
+
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
