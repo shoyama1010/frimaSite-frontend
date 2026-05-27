@@ -15,7 +15,8 @@ laravelで動いてたフリマアプリを、SPA化して、画面構成的に�
 
 ### フロントエンド
 - React 
-- TypeScript  
+- TypeScript
+- Node.js
 - Vite
 - React Router
 - Tailwind css 
