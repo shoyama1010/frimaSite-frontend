@@ -11,6 +11,7 @@ http://localhost:5173
 
 - laravelで動いてたフリマアプリを、SPA化して、画面構成的にどのようになるかを理解を深めました。
 - バックエンド側のリポジトリは⇒です。https://github.com/shoyama1010/tech-furima
+- 将来的に、Verselで公開することを目的としてます。
 
 ## 技術構成
 
