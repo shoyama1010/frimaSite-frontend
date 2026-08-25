@@ -1,4 +1,4 @@
-# coachtechフリマアプリ　（React + TypeScript + Vite）
+# Tech-furimaアプリ　（React + TypeScript + Vite）
 
 ## アプリ概要（画面構成）
 Laravel API と React(TypeScript) を用いたフリマアプリです。
@@ -28,7 +28,7 @@ http://localhost:5173
 
 ## 機能一覧
 
--（仮）ログイン＆ログアウト 機能（会員登録は開発中）
+- ログイン＆ログアウト 機能（会員登録は開発中）
 - 商品一覧表示
 - 検索機能
 - 商品詳細表示（下記のいいね機能以外は、開発中）
