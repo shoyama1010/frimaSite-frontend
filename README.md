@@ -93,76 +93,38 @@ http://localhost:5173
 - Tailwind CSSを使用し、商品一覧・商品詳細・ログイン画面のレイアウトをコンポーネント単位で整えました。
 - 既存のフリマアプリ画面に近い見た目を保ちながら、React側で再利用しやすいUIにしています。
 
+## 苦労した点・解決したこと
 
+### Laravel APIとの認証状態の連携
+Laravel側で発行されたアクセストークンをReact側で保持し、
+認証が必要なAPI通信時にAuthorization Bearer Tokenとして送信する構成にしました。
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+ログイン状態に応じてヘッダー表示や利用可能な機能を切り替える部分も調整しました。
 
-Currently, two official plugins are available:
+### API取得データと画面表示の整合
+商品一覧・商品詳細・いいね数・コメントなど、
+複数のAPIレスポンスを画面上で正しく表示する部分に苦労しました。
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+Laravel側のレスポンス形式を確認しながら、
+React側の型定義と表示処理を調整しました。
 
-## React Compiler
+### いいね状態の即時反映
+いいね登録・解除後に画面全体を再読み込みせず、
+いいね数と状態をその場で反映させる処理を実装しました。
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+API通信後にStateを更新することで、
+SPAとして操作感を損なわないようにしました。
 
-## Expanding the ESLint configuration
+### 非同期検索と画面遷移
+検索キーワードをAPIへ渡して結果を取得し、
+ページを再読み込みせずに一覧へ反映する処理を実装しました。
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+React Routerを利用して、
+商品一覧から商品詳細へスムーズに遷移できる構成にしました。
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+### 本番環境でのAPI接続
+ローカル環境とVercel公開環境でAPI接続先が異なるため、
+環境変数を利用して接続先を切り替える構成に整理しました。
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
-
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+Laravel側をRailway、React側をVercelへ分離して公開し、
+CORS・認証・画像URLなどを確認しながら調整しました。
