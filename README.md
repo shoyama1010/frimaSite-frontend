@@ -3,25 +3,18 @@
 ## アプリ概要（画面構成）
 Laravel API と React(TypeScript) を用いたフリマアプリです。
 
-## アプリケーションURL
-
-http://localhost:5173
-
 ## 作成した目的
 
-- laravelで動いてたフリマアプリを、SPA化して、画面構成的にどのようになるかを理解を深めました。
-- バックエンド側のリポジトリは⇒です。https://github.com/shoyama1010/tech-furima
-- 将来的に、Verselで公開することを目的としてます。
+- Laravelで構築していたフリマアプリのフロントエンドを React + TypeScript で再構築し、Laravel APIと連携するSPA構成への理解を深めることを目的としました。
+- バックエンド側のリポジトリはこちらです。   https://github.com/shoyama1010/tech-furima
+- フロントエンドはVercelへのデプロイを想定しています。
 
-## 技術構成
+## アプリケーションURL
+### ローカル環境
+http://localhost:5173
 
-### フロントエンド
-- React 
-- TypeScript
-- Node.js
-- Vite
-- React Router
-- Tailwind css 
+### 本番環境
+Vercelへのデプロイを予定
 
 ### API連携
 - Laravel API（Sanctum認証）
@@ -42,6 +35,7 @@ http://localhost:5173
 - React Router
 - Tailwind CSS
 - Vite
+- Tailwind css 
 
 ## 環境構築
 
