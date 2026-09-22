@@ -45,7 +45,7 @@ export default function ItemListPage() {
     return (
         <div className="min-h-screen bg-white">
             <header className="flex h-[70px] items-center justify-between bg-black px-8">
-                <div className="text-3xl font-bold text-white">COACHTECH</div>
+                <div className="text-3xl font-bold text-white">Tech-furima</div>
 
                 <form onSubmit={handleSearch}>
                     <input

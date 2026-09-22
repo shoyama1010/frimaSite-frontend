@@ -51,7 +51,7 @@ export default function LoginPage() {
         <div className="min-h-screen bg-white">
             <header className="flex h-[70px] items-center bg-black px-8">
                 <Link to="/" className="text-3xl font-bold text-white">
-                    COACHTECH
+                    Tech-furima
                 </Link>
             </header>
 

@@ -86,32 +86,7 @@ export default function ItemDetailPage() {
             likes_count: result.likes_count,
         });
     };
-    // const handleToggleLike = async () => {
-    //     console.log("いいねクリック");
-    //     if (!item) return;
-    //     const response = await fetch(
-    //         `http://localhost/api/items/${item.id}/toggle-like`,
-    //         {
-    //             method: "POST",
-    //             // credentials: "include",
-    //             headers: {
-    //                 Accept: "application/json",
-    //             },
-    //         }
-    //     );
-
-    //     if (response.status === 401) {
-    //         alert("いいねするにはログインが必要です。");
-    //         return;
-    //     }
-
-    //     const result = await response.json();
-    //     setItem({
-    //         ...item,
-    //         liked_by_me: result.liked_by_me,
-    //         likes_count: result.likes_count,
-    //     });
-    // };
+    
 
 
     if (loading) {
@@ -127,7 +102,7 @@ export default function ItemDetailPage() {
         <div className="min-h-screen bg-white">
             <header className="flex h-[70px] items-center justify-between bg-black px-8">
                 <Link to="/" className="text-3xl font-bold text-white">
-                    COACHTECH
+                    Tech-furima
                 </Link>
 
                 <input
