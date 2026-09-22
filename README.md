@@ -1,4 +1,6 @@
 # Tech-furimaアプリ　（React + TypeScript + Vite）
+<img width="1898" height="957" alt="スクリーンショット (6311)" src="https://github.com/user-attachments/assets/3eeea260-f21d-4863-af87-c843eac75de2" />
+<img width="1888" height="958" alt="スクリーンショット (6312)" src="https://github.com/user-attachments/assets/2fa299c4-e5be-4202-aedd-216f8ac3d56a" />
 
 ## アプリ概要（画面構成）
 Laravel API と React(TypeScript) を用いたフリマアプリです。
